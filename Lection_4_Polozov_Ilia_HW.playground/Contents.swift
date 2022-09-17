@@ -45,9 +45,6 @@ func findOccurFromSet (array: Array<Int>) -> (Int, Int?) {
     var prevSetSize: Int = 0
     for (index, randomN) in randomArray.enumerated() {
         randomSet.insert(randomN)
-        //print("randomSet = ", randomSet)
-        //print("randomSet.coun = ", randomSet.count)
-        //print("prevSetSize = ", prevSetSize)
         if (randomSet.count == prevSetSize) {
             return (index, randomN)
         }
