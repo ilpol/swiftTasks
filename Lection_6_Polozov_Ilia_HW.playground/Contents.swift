@@ -15,17 +15,15 @@ toString(tupleParam: (3, "3"))
 
 
 func runClosure(detector: Int, closure: (() -> ())?) -> Void {
-    if (detector > 0) {
-        if let closure = closure {
-            closure()
-        }
+    if detector > 0, let closure = closure {
+        closure()
     }
 }
 runClosure(detector: 5) {
     print("func runClosure: i am closure")
 }
 runClosure(detector: -2) {
-   print("i am closure")
+   print("func runClosure: i am closure")
 }
 
 
