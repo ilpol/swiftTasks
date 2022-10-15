@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0t7-hb-IXz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="jb1-gm-izU">
+            <objects>
+                <tabBarController id="0t7-hb-IXz" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8XF-Oa-YjK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Yu4-g8-q6z" kind="relationship" relationship="viewControllers" id="dW3-sR-iKi"/>
+                        <segue destination="dAB-rw-XSy" kind="relationship" relationship="viewControllers" id="SQX-xi-lAE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rsh-0p-Xeq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-384" y="-58"/>
+        </scene>
+        <!--Ораньжевый-->
+        <scene sceneID="Ccq-q4-TYy">
+            <objects>
+                <navigationController id="Yu4-g8-q6z" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Ораньжевый" image="folder" catalog="system" selectedImage="folder" id="zXg-M0-qFj"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oj8-wK-eQ0">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Cb3-06-fzy" kind="relationship" relationship="rootViewController" id="JrQ-C4-93s"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gam-63-GGy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-774" y="643"/>
+        </scene>
+        <!--Ораньжевый-->
+        <scene sceneID="B8W-zb-xdG">
+            <objects>
+                <viewController storyboardIdentifier="OrangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cb3-06-fzy" customClass="OrangeVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HWv-Fy-eDf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljX-vi-CLz">
+                                <rect key="frame" x="125.5" y="432.5" width="163.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на зеленый"/>
+                                <connections>
+                                    <action selector="onOrangeToGreen" destination="Cb3-06-fzy" eventType="touchUpInside" id="Gwq-rY-PdT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Lys-YE-k4L"/>
+                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                        <constraints>
+                            <constraint firstItem="ljX-vi-CLz" firstAttribute="centerY" secondItem="HWv-Fy-eDf" secondAttribute="centerY" id="60I-DS-G7X"/>
+                            <constraint firstItem="ljX-vi-CLz" firstAttribute="centerX" secondItem="HWv-Fy-eDf" secondAttribute="centerX" id="cGV-yh-cut"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Ораньжевый" id="Dop-jB-ucG"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcB-Ax-uAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="1411"/>
+        </scene>
+        <!--GreenVC-->
+        <scene sceneID="Glw-0g-8vN">
+            <objects>
+                <viewController storyboardIdentifier="GreenVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aP9-DI-EO6" customClass="GreenVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g3b-Op-7B0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="AKa-YW-O2c"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3cu-wP-ZCs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eCk-25-Ggx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-775" y="2123"/>
+        </scene>
+        <!--BlueVC-->
+        <scene sceneID="mhz-BJ-55c">
+            <objects>
+                <viewController storyboardIdentifier="BlueVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="df2-uH-hya" customClass="BlueVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wz5-zU-jy4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kKD-gh-i2e"/>
+                        <color key="backgroundColor" systemColor="systemBlueColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="b4S-xD-JMu"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hFu-OQ-clf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="2123"/>
+        </scene>
+        <!--Фиолетовый-->
+        <scene sceneID="bQk-97-efx">
+            <objects>
+                <viewController storyboardIdentifier="PurpleVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="3vr-8d-qLW" customClass="PurpleVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zlh-jY-l3C">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-IA-rE0">
+                                <rect key="frame" x="133.5" y="432.5" width="147" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на синий"/>
+                                <connections>
+                                    <segue destination="df2-uH-hya" kind="show" id="O8o-A3-akz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jbV-eH-sak"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="V9h-IA-rE0" firstAttribute="centerY" secondItem="Zlh-jY-l3C" secondAttribute="centerY" id="gK0-9U-hw0"/>
+                            <constraint firstItem="V9h-IA-rE0" firstAttribute="centerX" secondItem="Zlh-jY-l3C" secondAttribute="centerX" id="wg4-bJ-c0t"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Фиолетовый" id="jYC-8C-VPB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UZp-q7-eUS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="1411"/>
+        </scene>
+        <!--Фиолетовый-->
+        <scene sceneID="n9Y-bm-wMp">
+            <objects>
+                <navigationController id="dAB-rw-XSy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Фиолетовый" image="arrow.down.doc.fill" catalog="system" selectedImage="arrow.down.doc.fill" id="jgZ-3r-TDp"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XFz-3S-tLz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="3vr-8d-qLW" kind="relationship" relationship="rootViewController" id="OAg-Bz-z0c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qCa-CB-Qw0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113" y="643"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" systemColor="systemPinkColor"/>
+    <resources>
+        <image name="arrow.down.doc.fill" catalog="system" width="115" height="128"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
