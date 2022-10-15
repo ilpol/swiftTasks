@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YdB-fg-2tg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="jYq-kb-jma">
+            <objects>
+                <viewController id="YdB-fg-2tg" customClass="ViewController" customModule="HW_lecture_16" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pRF-x3-1cl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ijJ-Ge-zpx">
+                                <rect key="frame" x="184" y="64" width="46" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="zxZ-xG-TEd">
+                                <rect key="frame" x="113.5" y="316" width="187" height="31"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vVi-Ew-nVv">
+                                        <rect key="frame" x="0.0" y="0.0" width="63.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Старт"/>
+                                        <connections>
+                                            <action selector="startTimerAction:" destination="YdB-fg-2tg" eventType="touchUpInside" id="Sg0-xg-t48"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k2p-gr-GIx">
+                                        <rect key="frame" x="123.5" y="0.0" width="63.5" height="31"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Стоп"/>
+                                        <connections>
+                                            <action selector="stopTimerAction:" destination="YdB-fg-2tg" eventType="touchUpInside" id="2oB-bD-4vc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HdO-6C-HHu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ijJ-Ge-zpx" firstAttribute="top" secondItem="HdO-6C-HHu" secondAttribute="top" constant="20" id="4ab-oe-EKi"/>
+                            <constraint firstItem="zxZ-xG-TEd" firstAttribute="centerX" secondItem="pRF-x3-1cl" secondAttribute="centerX" id="7m9-6m-Fzb"/>
+                            <constraint firstItem="zxZ-xG-TEd" firstAttribute="top" secondItem="ijJ-Ge-zpx" secondAttribute="bottom" constant="231.5" id="dVw-U1-Z3F"/>
+                            <constraint firstItem="ijJ-Ge-zpx" firstAttribute="centerX" secondItem="pRF-x3-1cl" secondAttribute="centerX" id="rsI-fu-iAT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="startButton" destination="vVi-Ew-nVv" id="av4-yA-Aul"/>
+                        <outlet property="stopButton" destination="k2p-gr-GIx" id="2rC-66-ZnE"/>
+                        <outlet property="timerView" destination="ijJ-Ge-zpx" id="gy3-Cb-Mh9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="voC-1H-FaI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="183" y="-345"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
