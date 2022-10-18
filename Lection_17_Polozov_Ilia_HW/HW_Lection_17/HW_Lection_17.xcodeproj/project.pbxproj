@@ -22,6 +22,8 @@
 		BB56CB1B28FB72480094D56A /* OrangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56CB1A28FB72480094D56A /* OrangeVC.swift */; };
 		BB56CB1D28FB72830094D56A /* PurpleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56CB1C28FB72830094D56A /* PurpleVC.swift */; };
 		BB56CB1F28FB72E00094D56A /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB56CB1E28FB72E00094D56A /* TabBarVC.swift */; };
+		BB9BCEC028FF446E0058D398 /* RedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9BCEBF28FF446E0058D398 /* RedVC.swift */; };
+		BB9BCEC228FF4BFA0058D398 /* BrownVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9BCEC128FF4BFA0058D398 /* BrownVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		BB56CB1A28FB72480094D56A /* OrangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrangeVC.swift; sourceTree = "<group>"; };
 		BB56CB1C28FB72830094D56A /* PurpleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurpleVC.swift; sourceTree = "<group>"; };
 		BB56CB1E28FB72E00094D56A /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		BB9BCEBF28FF446E0058D398 /* RedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedVC.swift; sourceTree = "<group>"; };
+		BB9BCEC128FF4BFA0058D398 /* BrownVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				BB56CAE128FB3A7C0094D56A /* AppDelegate.swift */,
 				BB56CAE328FB3A7C0094D56A /* SceneDelegate.swift */,
 				BB56CAE728FB3A7C0094D56A /* Main.storyboard */,
+				BB9BCEC128FF4BFA0058D398 /* BrownVC.swift */,
+				BB9BCEBF28FF446E0058D398 /* RedVC.swift */,
 				BB56CB1E28FB72E00094D56A /* TabBarVC.swift */,
 				BB56CB1C28FB72830094D56A /* PurpleVC.swift */,
 				BB56CB1828FB6E290094D56A /* BlueVC.swift */,
@@ -278,8 +284,10 @@
 			files = (
 				BB56CB1728FB617A0094D56A /* UIVC+Init.swift in Sources */,
 				BB56CB1528FB55270094D56A /* GreenVC.swift in Sources */,
+				BB9BCEC228FF4BFA0058D398 /* BrownVC.swift in Sources */,
 				BB56CB1F28FB72E00094D56A /* TabBarVC.swift in Sources */,
 				BB56CAEC28FB3A7C0094D56A /* HW_Lection_17.xcdatamodeld in Sources */,
+				BB9BCEC028FF446E0058D398 /* RedVC.swift in Sources */,
 				BB56CAE228FB3A7C0094D56A /* AppDelegate.swift in Sources */,
 				BB56CB1D28FB72830094D56A /* PurpleVC.swift in Sources */,
 				BB56CAE428FB3A7C0094D56A /* SceneDelegate.swift in Sources */,

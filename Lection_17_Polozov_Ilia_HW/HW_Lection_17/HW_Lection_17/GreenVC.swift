@@ -9,6 +9,15 @@ import UIKit
 
 class GreenVC: UIViewController {
 
+    @IBAction func onGreenToRed(_ sender: Any) {
+        if let vc = RedVC.initFromSb() {
+            navigationController?.pushViewController(vc, animated: true)
+            // self.present(vc, animated: true)
+        }
+    }
+    @IBAction func goToOrangeRootBySegue(_ sender: Any) {
+        self.performSegue(withIdentifier: "goToOrangeRoot", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

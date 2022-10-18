@@ -43,7 +43,7 @@
             </objects>
             <point key="canvasLocation" x="-774" y="643"/>
         </scene>
-        <!--Ораньжевый-->
+        <!--Оранжевый-->
         <scene sceneID="B8W-zb-xdG">
             <objects>
                 <viewController storyboardIdentifier="OrangeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Cb3-06-fzy" customClass="OrangeVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
@@ -52,9 +52,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljX-vi-CLz">
-                                <rect key="frame" x="125.5" y="432.5" width="163.5" height="31"/>
+                                <rect key="frame" x="98" y="432.5" width="218.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Перейти на зеленый"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на зеленый по коду">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="onOrangeToGreen" destination="Cb3-06-fzy" eventType="touchUpInside" id="Gwq-rY-PdT"/>
                                 </connections>
@@ -67,7 +69,7 @@
                             <constraint firstItem="ljX-vi-CLz" firstAttribute="centerX" secondItem="HWv-Fy-eDf" secondAttribute="centerX" id="cGV-yh-cut"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Ораньжевый" id="Dop-jB-ucG"/>
+                    <navigationItem key="navigationItem" title="Оранжевый" id="Dop-jB-ucG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcB-Ax-uAJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -80,14 +82,133 @@
                     <view key="view" contentMode="scaleToFill" id="g3b-Op-7B0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sih-7a-ugu">
+                                <rect key="frame" x="87" y="432.5" width="240" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на стартовый по segue">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToOrangeRootBySegue:" destination="aP9-DI-EO6" eventType="touchUpInside" id="wG8-N4-EWD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7x-wZ-RLm">
+                                <rect key="frame" x="97.5" y="513.5" width="219.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на красный по коду">
+                                    <color key="baseBackgroundColor" systemColor="systemRedColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="onGreenToRed:" destination="aP9-DI-EO6" eventType="touchUpInside" id="30s-X8-hx2"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="AKa-YW-O2c"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="o7x-wZ-RLm" firstAttribute="centerX" secondItem="g3b-Op-7B0" secondAttribute="centerX" id="6zh-MW-HNQ"/>
+                            <constraint firstItem="sih-7a-ugu" firstAttribute="centerY" secondItem="g3b-Op-7B0" secondAttribute="centerY" id="T4O-01-c7x"/>
+                            <constraint firstItem="sih-7a-ugu" firstAttribute="centerX" secondItem="g3b-Op-7B0" secondAttribute="centerX" id="fxQ-my-SLF"/>
+                            <constraint firstItem="o7x-wZ-RLm" firstAttribute="top" secondItem="sih-7a-ugu" secondAttribute="bottom" constant="50" id="v3W-7O-oPg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3cu-wP-ZCs"/>
+                    <connections>
+                        <segue destination="m6Z-B4-Cc1" kind="unwind" identifier="goToOrangeRoot" unwindAction="unwindToOrange:" id="iGW-eI-ZxE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eCk-25-Ggx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="m6Z-B4-Cc1" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-775" y="2123"/>
+            <point key="canvasLocation" x="-775.36231884057975" y="2122.7678571428569"/>
+        </scene>
+        <!--RedVC-->
+        <scene sceneID="Z2B-09-1MU">
+            <objects>
+                <viewController storyboardIdentifier="RedVC" id="cdx-25-IlI" customClass="RedVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hY3-qR-WXc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGz-xM-uCS">
+                                <rect key="frame" x="87" y="432.5" width="240" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на стартовый по segue">
+                                    <color key="baseBackgroundColor" systemColor="systemOrangeColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToOrangeRootBySegue:" destination="cdx-25-IlI" eventType="touchUpInside" id="gH4-i1-FNx"/>
+                                    <segue destination="fBo-2a-LSq" kind="unwind" identifier="goToOrangeRoot" unwindAction="unwindToOrange:" id="r9H-LD-WQE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lE9-EI-qR4">
+                                <rect key="frame" x="144" y="513.5" width="126" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти назад">
+                                    <color key="baseBackgroundColor" systemColor="systemGreenColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goBack:" destination="cdx-25-IlI" eventType="touchUpInside" id="RsC-hn-bVa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8fr-xA-BBp"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="GGz-xM-uCS" firstAttribute="centerY" secondItem="hY3-qR-WXc" secondAttribute="centerY" id="4gf-k2-FD7"/>
+                            <constraint firstItem="lE9-EI-qR4" firstAttribute="centerX" secondItem="hY3-qR-WXc" secondAttribute="centerX" id="a1N-m5-DVH"/>
+                            <constraint firstItem="GGz-xM-uCS" firstAttribute="centerX" secondItem="hY3-qR-WXc" secondAttribute="centerX" id="mo0-41-P9a"/>
+                            <constraint firstItem="lE9-EI-qR4" firstAttribute="top" secondItem="GGz-xM-uCS" secondAttribute="bottom" constant="50" id="zwe-15-g1h"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9NN-GA-K6B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fBo-2a-LSq" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-775.36231884057975" y="2872.7678571428569"/>
+        </scene>
+        <!--BrownVC-->
+        <scene sceneID="njl-F6-2j3">
+            <objects>
+                <viewController id="FaL-Wv-odV" customClass="BrownVC" customModule="HW_Lection_17" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YzD-X8-vzg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggH-6L-hWd">
+                                <rect key="frame" x="94" y="432.5" width="226" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на стартовый по Pop">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToPurpleRootByPop:" destination="FaL-Wv-odV" eventType="touchUpInside" id="wIV-qT-bWk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QsZ-pV-ncC">
+                                <rect key="frame" x="144" y="513.5" width="126" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти назад"/>
+                                <connections>
+                                    <action selector="goBack:" destination="FaL-Wv-odV" eventType="touchUpInside" id="I46-ds-c18"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EH8-Ey-i4d"/>
+                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="ggH-6L-hWd" firstAttribute="centerX" secondItem="YzD-X8-vzg" secondAttribute="centerX" id="Ldg-Pc-mBq"/>
+                            <constraint firstItem="ggH-6L-hWd" firstAttribute="centerY" secondItem="YzD-X8-vzg" secondAttribute="centerY" id="Rul-rb-v7W"/>
+                            <constraint firstItem="QsZ-pV-ncC" firstAttribute="centerX" secondItem="YzD-X8-vzg" secondAttribute="centerX" id="Xug-68-5wO"/>
+                            <constraint firstItem="QsZ-pV-ncC" firstAttribute="top" secondItem="ggH-6L-hWd" secondAttribute="bottom" constant="50" id="sUH-fT-JD8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WM9-2f-4CY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="47k-SG-D3Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111.59420289855073" y="2872.7678571428569"/>
         </scene>
         <!--BlueVC-->
         <scene sceneID="mhz-BJ-55c">
@@ -96,8 +217,36 @@
                     <view key="view" contentMode="scaleToFill" id="Wz5-zU-jy4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vLV-LK-FDN">
+                                <rect key="frame" x="94" y="432.5" width="226" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на стартовый по Pop">
+                                    <color key="baseBackgroundColor" systemColor="systemPurpleColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="goToPurpleRootByPop:" destination="df2-uH-hya" eventType="touchUpInside" id="cmf-US-eTl"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mW0-u1-Yvy">
+                                <rect key="frame" x="66" y="513.5" width="282.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на коричневый по storyboard">
+                                    <color key="baseBackgroundColor" systemColor="systemBrownColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="FaL-Wv-odV" kind="show" id="oN7-tW-pQ7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kKD-gh-i2e"/>
                         <color key="backgroundColor" systemColor="systemBlueColor"/>
+                        <constraints>
+                            <constraint firstItem="vLV-LK-FDN" firstAttribute="centerX" secondItem="Wz5-zU-jy4" secondAttribute="centerX" id="4Jw-No-BmW"/>
+                            <constraint firstItem="mW0-u1-Yvy" firstAttribute="top" secondItem="vLV-LK-FDN" secondAttribute="bottom" constant="50" id="G59-NG-MJ9"/>
+                            <constraint firstItem="vLV-LK-FDN" firstAttribute="centerY" secondItem="Wz5-zU-jy4" secondAttribute="centerY" id="hd4-5n-wZr"/>
+                            <constraint firstItem="mW0-u1-Yvy" firstAttribute="centerX" secondItem="Wz5-zU-jy4" secondAttribute="centerX" id="nQ9-in-eVm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="b4S-xD-JMu"/>
                 </viewController>
@@ -114,9 +263,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9h-IA-rE0">
-                                <rect key="frame" x="133.5" y="432.5" width="147" height="31"/>
+                                <rect key="frame" x="86.5" y="432.5" width="241.5" height="31"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Перейти на синий"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Перейти на синий по storyboard"/>
                                 <connections>
                                     <segue destination="df2-uH-hya" kind="show" id="O8o-A3-akz"/>
                                 </connections>
@@ -153,12 +302,15 @@
             <point key="canvasLocation" x="113" y="643"/>
         </scene>
     </scenes>
-    <color key="tintColor" systemColor="systemPinkColor"/>
+    <color key="tintColor" systemColor="systemBlueColor"/>
     <resources>
         <image name="arrow.down.doc.fill" catalog="system" width="115" height="128"/>
         <image name="folder" catalog="system" width="128" height="97"/>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -166,11 +318,11 @@
         <systemColor name="systemOrangeColor">
             <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
