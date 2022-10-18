@@ -22,17 +22,17 @@ class BrownVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("Appear orange")
+        print("Appear brown")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        print("Disappear orange")
+        print("Disappear brown")
     }
     
     override func willMove(toParent parent: UIViewController?) {
         if parent == nil {
-            print("Destroy orange")
+            print("Destroy brown")
         }
     }
     
