@@ -1,0 +1,896 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB01CF15291C3C8400B9802B /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB01CF14291C3C8400B9802B /* Colors.swift */; };
+		BB117CB72919B8F8001064F3 /* FridgeItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB117CB62919B8F8001064F3 /* FridgeItemCell.swift */; };
+		BB279FEA2932445800733452 /* ViewFridgeItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FE92932445800733452 /* ViewFridgeItemForm.swift */; };
+		BB279FEC2932446500733452 /* InteractorFridgeItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FEB2932446500733452 /* InteractorFridgeItemForm.swift */; };
+		BB279FEE2932446F00733452 /* PresenterFridgeItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FED2932446F00733452 /* PresenterFridgeItemForm.swift */; };
+		BB279FF02932447C00733452 /* EntityFridgeItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FEF2932447C00733452 /* EntityFridgeItemForm.swift */; };
+		BB279FF22932448600733452 /* RouterFridgeItemForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FF12932448600733452 /* RouterFridgeItemForm.swift */; };
+		BB279FF52932698B00733452 /* ViewFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FF42932698B00733452 /* ViewFridgeItem.swift */; };
+		BB279FF7293269A500733452 /* RouterFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FF6293269A500733452 /* RouterFridgeItem.swift */; };
+		BB279FF9293269BD00733452 /* InteractorFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FF8293269BD00733452 /* InteractorFridgeItem.swift */; };
+		BB279FFB293269CD00733452 /* PresenterFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FFA293269CD00733452 /* PresenterFridgeItem.swift */; };
+		BB279FFD293269DB00733452 /* EntityFridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB279FFC293269DB00733452 /* EntityFridgeItem.swift */; };
+		BB27A67328D7D57000701E9A /* NetworService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB27A67228D7D57000701E9A /* NetworService.swift */; };
+		BB449A352933ED800044187C /* CategoryItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB449A332933ED800044187C /* CategoryItem+CoreDataClass.swift */; };
+		BB449A362933ED800044187C /* CategoryItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB449A342933ED800044187C /* CategoryItem+CoreDataProperties.swift */; };
+		BB51FF6A292D407A00A0122D /* StartNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF69292D407A00A0122D /* StartNavigationController.swift */; };
+		BB51FF6D292D51B700A0122D /* ViewStove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF6C292D51B700A0122D /* ViewStove.swift */; };
+		BB51FF6F292D51CB00A0122D /* InteractorStove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF6E292D51CB00A0122D /* InteractorStove.swift */; };
+		BB51FF71292D51D800A0122D /* PresenterStove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF70292D51D800A0122D /* PresenterStove.swift */; };
+		BB51FF73292D51E500A0122D /* EntityStove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF72292D51E500A0122D /* EntityStove.swift */; };
+		BB51FF75292D51F300A0122D /* RouterStove.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB51FF74292D51F300A0122D /* RouterStove.swift */; };
+		BB6E72D52915540900A095BD /* FridgeItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E72D32915540900A095BD /* FridgeItem+CoreDataClass.swift */; };
+		BB6E72D62915540900A095BD /* FridgeItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6E72D42915540900A095BD /* FridgeItem+CoreDataProperties.swift */; };
+		BB8245672921581200A095DB /* StartTabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8245662921581200A095DB /* StartTabBarVC.swift */; };
+		BB82456929216ACA00A095DB /* StopWatchItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB82456829216ACA00A095DB /* StopWatchItemCell.swift */; };
+		BB871887292C14E50060BC98 /* ConfigureNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB871886292C14E50060BC98 /* ConfigureNavigation.swift */; };
+		BBA7215A292A4CE10034E2F4 /* ViewFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA72159292A4CE10034E2F4 /* ViewFridge.swift */; };
+		BBA7215C292A4CEF0034E2F4 /* InteractorFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7215B292A4CEF0034E2F4 /* InteractorFridge.swift */; };
+		BBA7215E292A4D000034E2F4 /* PresenterFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7215D292A4D000034E2F4 /* PresenterFridge.swift */; };
+		BBA72160292A4D120034E2F4 /* EntityFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA7215F292A4D120034E2F4 /* EntityFridge.swift */; };
+		BBA72162292A4D210034E2F4 /* RouterFridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA72161292A4D210034E2F4 /* RouterFridge.swift */; };
+		BBA9543F293123AF0053AA8A /* ViewRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA9543E293123AF0053AA8A /* ViewRecepiesCategories.swift */; };
+		BBA95441293123BA0053AA8A /* InteractorRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95440293123BA0053AA8A /* InteractorRecepiesCategories.swift */; };
+		BBA95443293123C80053AA8A /* PresenterRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95442293123C80053AA8A /* PresenterRecepiesCategories.swift */; };
+		BBA95445293123D30053AA8A /* EntityRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95444293123D30053AA8A /* EntityRecepiesCategories.swift */; };
+		BBA95447293123DF0053AA8A /* RouterRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95446293123DF0053AA8A /* RouterRecepiesCategories.swift */; };
+		BBE7CAD1293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7CACF293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift */; };
+		BBE7CAD2293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7CAD0293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift */; };
+		BBEF18AC2911D9E400201F8F /* FridgeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBEF18AA2911D9E400201F8F /* FridgeModel.xcdatamodeld */; };
+		BBF8AC3E28D675CF00847976 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC3D28D675CF00847976 /* AppDelegate.swift */; };
+		BBF8AC4028D675CF00847976 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC3F28D675CF00847976 /* SceneDelegate.swift */; };
+		BBF8AC4528D675CF00847976 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF8AC4328D675CF00847976 /* Main.storyboard */; };
+		BBF8AC4828D675CF00847976 /* KitchenHelper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC4628D675CF00847976 /* KitchenHelper.xcdatamodeld */; };
+		BBF8AC4A28D675D000847976 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBF8AC4928D675D000847976 /* Assets.xcassets */; };
+		BBF8AC4D28D675D000847976 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBF8AC4B28D675D000847976 /* LaunchScreen.storyboard */; };
+		BBF8AC5828D675D000847976 /* KitchenHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC5728D675D000847976 /* KitchenHelperTests.swift */; };
+		BBF8AC6228D675D000847976 /* KitchenHelperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC6128D675D000847976 /* KitchenHelperUITests.swift */; };
+		BBF8AC6428D675D000847976 /* KitchenHelperUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF8AC6328D675D000847976 /* KitchenHelperUITestsLaunchTests.swift */; };
+		BBF9D52A292447B100188B37 /* CategoryItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF9D529292447B100188B37 /* CategoryItemCell.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBF8AC5428D675D000847976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF8AC3228D675CF00847976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF8AC3928D675CF00847976;
+			remoteInfo = KitchenHelper;
+		};
+		BBF8AC5E28D675D000847976 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBF8AC3228D675CF00847976 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBF8AC3928D675CF00847976;
+			remoteInfo = KitchenHelper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB01CF14291C3C8400B9802B /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BB117CB62919B8F8001064F3 /* FridgeItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItemCell.swift; sourceTree = "<group>"; };
+		BB279FE92932445800733452 /* ViewFridgeItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFridgeItemForm.swift; sourceTree = "<group>"; };
+		BB279FEB2932446500733452 /* InteractorFridgeItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorFridgeItemForm.swift; sourceTree = "<group>"; };
+		BB279FED2932446F00733452 /* PresenterFridgeItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFridgeItemForm.swift; sourceTree = "<group>"; };
+		BB279FEF2932447C00733452 /* EntityFridgeItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFridgeItemForm.swift; sourceTree = "<group>"; };
+		BB279FF12932448600733452 /* RouterFridgeItemForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFridgeItemForm.swift; sourceTree = "<group>"; };
+		BB279FF42932698B00733452 /* ViewFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFridgeItem.swift; sourceTree = "<group>"; };
+		BB279FF6293269A500733452 /* RouterFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFridgeItem.swift; sourceTree = "<group>"; };
+		BB279FF8293269BD00733452 /* InteractorFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorFridgeItem.swift; sourceTree = "<group>"; };
+		BB279FFA293269CD00733452 /* PresenterFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFridgeItem.swift; sourceTree = "<group>"; };
+		BB279FFC293269DB00733452 /* EntityFridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFridgeItem.swift; sourceTree = "<group>"; };
+		BB27A67228D7D57000701E9A /* NetworService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworService.swift; sourceTree = "<group>"; };
+		BB449A332933ED800044187C /* CategoryItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB449A342933ED800044187C /* CategoryItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB51FF69292D407A00A0122D /* StartNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartNavigationController.swift; sourceTree = "<group>"; };
+		BB51FF6C292D51B700A0122D /* ViewStove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStove.swift; sourceTree = "<group>"; };
+		BB51FF6E292D51CB00A0122D /* InteractorStove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorStove.swift; sourceTree = "<group>"; };
+		BB51FF70292D51D800A0122D /* PresenterStove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterStove.swift; sourceTree = "<group>"; };
+		BB51FF72292D51E500A0122D /* EntityStove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityStove.swift; sourceTree = "<group>"; };
+		BB51FF74292D51F300A0122D /* RouterStove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterStove.swift; sourceTree = "<group>"; };
+		BB6E72D32915540900A095BD /* FridgeItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BB6E72D42915540900A095BD /* FridgeItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FridgeItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BB8245662921581200A095DB /* StartTabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartTabBarVC.swift; sourceTree = "<group>"; };
+		BB82456829216ACA00A095DB /* StopWatchItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StopWatchItemCell.swift; sourceTree = "<group>"; };
+		BB871886292C14E50060BC98 /* ConfigureNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigureNavigation.swift; sourceTree = "<group>"; };
+		BBA72159292A4CE10034E2F4 /* ViewFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFridge.swift; sourceTree = "<group>"; };
+		BBA7215B292A4CEF0034E2F4 /* InteractorFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorFridge.swift; sourceTree = "<group>"; };
+		BBA7215D292A4D000034E2F4 /* PresenterFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterFridge.swift; sourceTree = "<group>"; };
+		BBA7215F292A4D120034E2F4 /* EntityFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityFridge.swift; sourceTree = "<group>"; };
+		BBA72161292A4D210034E2F4 /* RouterFridge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterFridge.swift; sourceTree = "<group>"; };
+		BBA9543E293123AF0053AA8A /* ViewRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBA95440293123BA0053AA8A /* InteractorRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractorRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBA95442293123C80053AA8A /* PresenterRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBA95444293123D30053AA8A /* EntityRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBA95446293123DF0053AA8A /* RouterRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBE7CACF293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BBE7CAD0293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BBEF18AB2911D9E400201F8F /* FridgeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FridgeModel.xcdatamodel; sourceTree = "<group>"; };
+		BBF8AC3A28D675CF00847976 /* KitchenHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KitchenHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8AC3D28D675CF00847976 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBF8AC3F28D675CF00847976 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BBF8AC4428D675CF00847976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBF8AC4728D675CF00847976 /* KitchenHelper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KitchenHelper.xcdatamodel; sourceTree = "<group>"; };
+		BBF8AC4928D675D000847976 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBF8AC4C28D675D000847976 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBF8AC4E28D675D000847976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBF8AC5328D675D000847976 /* KitchenHelperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitchenHelperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8AC5728D675D000847976 /* KitchenHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenHelperTests.swift; sourceTree = "<group>"; };
+		BBF8AC5D28D675D000847976 /* KitchenHelperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KitchenHelperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF8AC6128D675D000847976 /* KitchenHelperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenHelperUITests.swift; sourceTree = "<group>"; };
+		BBF8AC6328D675D000847976 /* KitchenHelperUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KitchenHelperUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBF9D529292447B100188B37 /* CategoryItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryItemCell.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBF8AC3728D675CF00847976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC5028D675D000847976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC5A28D675D000847976 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB279FE429323F9D00733452 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				BB01CF14291C3C8400B9802B /* Colors.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		BB279FE5293240D000733452 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				BB871886292C14E50060BC98 /* ConfigureNavigation.swift */,
+				BB51FF69292D407A00A0122D /* StartNavigationController.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		BB279FE6293240F700733452 /* DataClasses */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7CACE293D213800FA1F30 /* DownloadedImage */,
+				BB449A372933EDC20044187C /* CategoryItem */,
+				BB6E72D72915551200A095BD /* FridgeItem */,
+			);
+			path = DataClasses;
+			sourceTree = "<group>";
+		};
+		BB279FE72932417300733452 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BB279FF32932696D00733452 /* FridgeItem */,
+				BB279FE82932443200733452 /* FridgeItemForm */,
+				BBA9543D293123640053AA8A /* RecepiesCategories */,
+				BBA72158292A4B790034E2F4 /* Fridge */,
+				BB51FF6B292D51A000A0122D /* Stove */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BB279FE82932443200733452 /* FridgeItemForm */ = {
+			isa = PBXGroup;
+			children = (
+				BB279FE92932445800733452 /* ViewFridgeItemForm.swift */,
+				BB279FEB2932446500733452 /* InteractorFridgeItemForm.swift */,
+				BB279FED2932446F00733452 /* PresenterFridgeItemForm.swift */,
+				BB279FEF2932447C00733452 /* EntityFridgeItemForm.swift */,
+				BB279FF12932448600733452 /* RouterFridgeItemForm.swift */,
+			);
+			path = FridgeItemForm;
+			sourceTree = "<group>";
+		};
+		BB279FF32932696D00733452 /* FridgeItem */ = {
+			isa = PBXGroup;
+			children = (
+				BB279FF8293269BD00733452 /* InteractorFridgeItem.swift */,
+				BB279FF42932698B00733452 /* ViewFridgeItem.swift */,
+				BB279FFA293269CD00733452 /* PresenterFridgeItem.swift */,
+				BB279FFC293269DB00733452 /* EntityFridgeItem.swift */,
+				BB279FF6293269A500733452 /* RouterFridgeItem.swift */,
+			);
+			path = FridgeItem;
+			sourceTree = "<group>";
+		};
+		BB27A67928D7DA9600701E9A /* NetworService */ = {
+			isa = PBXGroup;
+			children = (
+				BB27A67228D7D57000701E9A /* NetworService.swift */,
+			);
+			path = NetworService;
+			sourceTree = "<group>";
+		};
+		BB449A372933EDC20044187C /* CategoryItem */ = {
+			isa = PBXGroup;
+			children = (
+				BB449A342933ED800044187C /* CategoryItem+CoreDataProperties.swift */,
+				BB449A332933ED800044187C /* CategoryItem+CoreDataClass.swift */,
+			);
+			path = CategoryItem;
+			sourceTree = "<group>";
+		};
+		BB51FF6B292D51A000A0122D /* Stove */ = {
+			isa = PBXGroup;
+			children = (
+				BB51FF6C292D51B700A0122D /* ViewStove.swift */,
+				BB51FF6E292D51CB00A0122D /* InteractorStove.swift */,
+				BB51FF70292D51D800A0122D /* PresenterStove.swift */,
+				BB51FF72292D51E500A0122D /* EntityStove.swift */,
+				BB51FF74292D51F300A0122D /* RouterStove.swift */,
+				BB82456829216ACA00A095DB /* StopWatchItemCell.swift */,
+			);
+			path = Stove;
+			sourceTree = "<group>";
+		};
+		BB6E72D72915551200A095BD /* FridgeItem */ = {
+			isa = PBXGroup;
+			children = (
+				BB6E72D32915540900A095BD /* FridgeItem+CoreDataClass.swift */,
+				BB6E72D42915540900A095BD /* FridgeItem+CoreDataProperties.swift */,
+			);
+			path = FridgeItem;
+			sourceTree = "<group>";
+		};
+		BBA72158292A4B790034E2F4 /* Fridge */ = {
+			isa = PBXGroup;
+			children = (
+				BBA72159292A4CE10034E2F4 /* ViewFridge.swift */,
+				BBA7215B292A4CEF0034E2F4 /* InteractorFridge.swift */,
+				BBA7215D292A4D000034E2F4 /* PresenterFridge.swift */,
+				BBA7215F292A4D120034E2F4 /* EntityFridge.swift */,
+				BBA72161292A4D210034E2F4 /* RouterFridge.swift */,
+				BB117CB62919B8F8001064F3 /* FridgeItemCell.swift */,
+			);
+			path = Fridge;
+			sourceTree = "<group>";
+		};
+		BBA9543D293123640053AA8A /* RecepiesCategories */ = {
+			isa = PBXGroup;
+			children = (
+				BBA9543E293123AF0053AA8A /* ViewRecepiesCategories.swift */,
+				BBA95440293123BA0053AA8A /* InteractorRecepiesCategories.swift */,
+				BBA95442293123C80053AA8A /* PresenterRecepiesCategories.swift */,
+				BBA95444293123D30053AA8A /* EntityRecepiesCategories.swift */,
+				BBA95446293123DF0053AA8A /* RouterRecepiesCategories.swift */,
+				BBF9D529292447B100188B37 /* CategoryItemCell.swift */,
+			);
+			path = RecepiesCategories;
+			sourceTree = "<group>";
+		};
+		BBE7CACE293D213800FA1F30 /* DownloadedImage */ = {
+			isa = PBXGroup;
+			children = (
+				BBE7CACF293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift */,
+				BBE7CAD0293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift */,
+			);
+			path = DownloadedImage;
+			sourceTree = "<group>";
+		};
+		BBF8AC3128D675CF00847976 = {
+			isa = PBXGroup;
+			children = (
+				BB27A67928D7DA9600701E9A /* NetworService */,
+				BBF8AC3C28D675CF00847976 /* KitchenHelper */,
+				BBF8AC5628D675D000847976 /* KitchenHelperTests */,
+				BBF8AC6028D675D000847976 /* KitchenHelperUITests */,
+				BBF8AC3B28D675CF00847976 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBF8AC3B28D675CF00847976 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8AC3A28D675CF00847976 /* KitchenHelper.app */,
+				BBF8AC5328D675D000847976 /* KitchenHelperTests.xctest */,
+				BBF8AC5D28D675D000847976 /* KitchenHelperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF8AC3C28D675CF00847976 /* KitchenHelper */ = {
+			isa = PBXGroup;
+			children = (
+				BB279FE5293240D000733452 /* Navigation */,
+				BB279FE6293240F700733452 /* DataClasses */,
+				BB279FE429323F9D00733452 /* Constants */,
+				BBF8AC4328D675CF00847976 /* Main.storyboard */,
+				BB279FE72932417300733452 /* Screens */,
+				BBF8AC3D28D675CF00847976 /* AppDelegate.swift */,
+				BBF8AC3F28D675CF00847976 /* SceneDelegate.swift */,
+				BB8245662921581200A095DB /* StartTabBarVC.swift */,
+				BBEF18AA2911D9E400201F8F /* FridgeModel.xcdatamodeld */,
+				BBF8AC4928D675D000847976 /* Assets.xcassets */,
+				BBF8AC4B28D675D000847976 /* LaunchScreen.storyboard */,
+				BBF8AC4E28D675D000847976 /* Info.plist */,
+				BBF8AC4628D675CF00847976 /* KitchenHelper.xcdatamodeld */,
+			);
+			path = KitchenHelper;
+			sourceTree = "<group>";
+		};
+		BBF8AC5628D675D000847976 /* KitchenHelperTests */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8AC5728D675D000847976 /* KitchenHelperTests.swift */,
+			);
+			path = KitchenHelperTests;
+			sourceTree = "<group>";
+		};
+		BBF8AC6028D675D000847976 /* KitchenHelperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BBF8AC6128D675D000847976 /* KitchenHelperUITests.swift */,
+				BBF8AC6328D675D000847976 /* KitchenHelperUITestsLaunchTests.swift */,
+			);
+			path = KitchenHelperUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBF8AC3928D675CF00847976 /* KitchenHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8AC6728D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelper" */;
+			buildPhases = (
+				BBF8AC3628D675CF00847976 /* Sources */,
+				BBF8AC3728D675CF00847976 /* Frameworks */,
+				BBF8AC3828D675CF00847976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KitchenHelper;
+			productName = KitchenHelper;
+			productReference = BBF8AC3A28D675CF00847976 /* KitchenHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBF8AC5228D675D000847976 /* KitchenHelperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8AC6A28D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelperTests" */;
+			buildPhases = (
+				BBF8AC4F28D675D000847976 /* Sources */,
+				BBF8AC5028D675D000847976 /* Frameworks */,
+				BBF8AC5128D675D000847976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF8AC5528D675D000847976 /* PBXTargetDependency */,
+			);
+			name = KitchenHelperTests;
+			productName = KitchenHelperTests;
+			productReference = BBF8AC5328D675D000847976 /* KitchenHelperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBF8AC5C28D675D000847976 /* KitchenHelperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF8AC6D28D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelperUITests" */;
+			buildPhases = (
+				BBF8AC5928D675D000847976 /* Sources */,
+				BBF8AC5A28D675D000847976 /* Frameworks */,
+				BBF8AC5B28D675D000847976 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBF8AC5F28D675D000847976 /* PBXTargetDependency */,
+			);
+			name = KitchenHelperUITests;
+			productName = KitchenHelperUITests;
+			productReference = BBF8AC5D28D675D000847976 /* KitchenHelperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBF8AC3228D675CF00847976 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					BBF8AC3928D675CF00847976 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					BBF8AC5228D675D000847976 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BBF8AC3928D675CF00847976;
+					};
+					BBF8AC5C28D675D000847976 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = BBF8AC3928D675CF00847976;
+					};
+				};
+			};
+			buildConfigurationList = BBF8AC3528D675CF00847976 /* Build configuration list for PBXProject "KitchenHelper" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBF8AC3128D675CF00847976;
+			productRefGroup = BBF8AC3B28D675CF00847976 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBF8AC3928D675CF00847976 /* KitchenHelper */,
+				BBF8AC5228D675D000847976 /* KitchenHelperTests */,
+				BBF8AC5C28D675D000847976 /* KitchenHelperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBF8AC3828D675CF00847976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8AC4D28D675D000847976 /* LaunchScreen.storyboard in Resources */,
+				BBF8AC4A28D675D000847976 /* Assets.xcassets in Resources */,
+				BBF8AC4528D675CF00847976 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC5128D675D000847976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC5B28D675D000847976 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBF8AC3628D675CF00847976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA95445293123D30053AA8A /* EntityRecepiesCategories.swift in Sources */,
+				BB279FEA2932445800733452 /* ViewFridgeItemForm.swift in Sources */,
+				BB279FF02932447C00733452 /* EntityFridgeItemForm.swift in Sources */,
+				BB51FF6A292D407A00A0122D /* StartNavigationController.swift in Sources */,
+				BB279FFB293269CD00733452 /* PresenterFridgeItem.swift in Sources */,
+				BB51FF6F292D51CB00A0122D /* InteractorStove.swift in Sources */,
+				BB279FEE2932446F00733452 /* PresenterFridgeItemForm.swift in Sources */,
+				BBA7215A292A4CE10034E2F4 /* ViewFridge.swift in Sources */,
+				BB01CF15291C3C8400B9802B /* Colors.swift in Sources */,
+				BB279FF7293269A500733452 /* RouterFridgeItem.swift in Sources */,
+				BB51FF6D292D51B700A0122D /* ViewStove.swift in Sources */,
+				BBF8AC4828D675CF00847976 /* KitchenHelper.xcdatamodeld in Sources */,
+				BB279FF9293269BD00733452 /* InteractorFridgeItem.swift in Sources */,
+				BBA95441293123BA0053AA8A /* InteractorRecepiesCategories.swift in Sources */,
+				BB279FF52932698B00733452 /* ViewFridgeItem.swift in Sources */,
+				BB27A67328D7D57000701E9A /* NetworService.swift in Sources */,
+				BBA95443293123C80053AA8A /* PresenterRecepiesCategories.swift in Sources */,
+				BBA72160292A4D120034E2F4 /* EntityFridge.swift in Sources */,
+				BBE7CAD1293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift in Sources */,
+				BB449A352933ED800044187C /* CategoryItem+CoreDataClass.swift in Sources */,
+				BB871887292C14E50060BC98 /* ConfigureNavigation.swift in Sources */,
+				BB51FF71292D51D800A0122D /* PresenterStove.swift in Sources */,
+				BB51FF75292D51F300A0122D /* RouterStove.swift in Sources */,
+				BB82456929216ACA00A095DB /* StopWatchItemCell.swift in Sources */,
+				BBE7CAD2293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift in Sources */,
+				BB279FEC2932446500733452 /* InteractorFridgeItemForm.swift in Sources */,
+				BB8245672921581200A095DB /* StartTabBarVC.swift in Sources */,
+				BBA7215C292A4CEF0034E2F4 /* InteractorFridge.swift in Sources */,
+				BBF9D52A292447B100188B37 /* CategoryItemCell.swift in Sources */,
+				BBA9543F293123AF0053AA8A /* ViewRecepiesCategories.swift in Sources */,
+				BBA95447293123DF0053AA8A /* RouterRecepiesCategories.swift in Sources */,
+				BB6E72D52915540900A095BD /* FridgeItem+CoreDataClass.swift in Sources */,
+				BB6E72D62915540900A095BD /* FridgeItem+CoreDataProperties.swift in Sources */,
+				BBF8AC3E28D675CF00847976 /* AppDelegate.swift in Sources */,
+				BBA7215E292A4D000034E2F4 /* PresenterFridge.swift in Sources */,
+				BBA72162292A4D210034E2F4 /* RouterFridge.swift in Sources */,
+				BB279FF22932448600733452 /* RouterFridgeItemForm.swift in Sources */,
+				BB279FFD293269DB00733452 /* EntityFridgeItem.swift in Sources */,
+				BB51FF73292D51E500A0122D /* EntityStove.swift in Sources */,
+				BBF8AC4028D675CF00847976 /* SceneDelegate.swift in Sources */,
+				BB449A362933ED800044187C /* CategoryItem+CoreDataProperties.swift in Sources */,
+				BBEF18AC2911D9E400201F8F /* FridgeModel.xcdatamodeld in Sources */,
+				BB117CB72919B8F8001064F3 /* FridgeItemCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC4F28D675D000847976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8AC5828D675D000847976 /* KitchenHelperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBF8AC5928D675D000847976 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF8AC6228D675D000847976 /* KitchenHelperUITests.swift in Sources */,
+				BBF8AC6428D675D000847976 /* KitchenHelperUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBF8AC5528D675D000847976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF8AC3928D675CF00847976 /* KitchenHelper */;
+			targetProxy = BBF8AC5428D675D000847976 /* PBXContainerItemProxy */;
+		};
+		BBF8AC5F28D675D000847976 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBF8AC3928D675CF00847976 /* KitchenHelper */;
+			targetProxy = BBF8AC5E28D675D000847976 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBF8AC4328D675CF00847976 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBF8AC4428D675CF00847976 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBF8AC4B28D675D000847976 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBF8AC4C28D675D000847976 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBF8AC6528D675D000847976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBF8AC6628D675D000847976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBF8AC6828D675D000847976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KitchenHelper/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBF8AC6928D675D000847976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = KitchenHelper/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBF8AC6B28D675D000847976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KitchenHelper.app/KitchenHelper";
+			};
+			name = Debug;
+		};
+		BBF8AC6C28D675D000847976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KitchenHelper.app/KitchenHelper";
+			};
+			name = Release;
+		};
+		BBF8AC6E28D675D000847976 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KitchenHelper;
+			};
+			name = Debug;
+		};
+		BBF8AC6F28D675D000847976 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UBGZ56QK94;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nextswertqw.KitchenHelperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KitchenHelper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBF8AC3528D675CF00847976 /* Build configuration list for PBXProject "KitchenHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8AC6528D675D000847976 /* Debug */,
+				BBF8AC6628D675D000847976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8AC6728D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8AC6828D675D000847976 /* Debug */,
+				BBF8AC6928D675D000847976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8AC6A28D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8AC6B28D675D000847976 /* Debug */,
+				BBF8AC6C28D675D000847976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF8AC6D28D675D000847976 /* Build configuration list for PBXNativeTarget "KitchenHelperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF8AC6E28D675D000847976 /* Debug */,
+				BBF8AC6F28D675D000847976 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BBEF18AA2911D9E400201F8F /* FridgeModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BBEF18AB2911D9E400201F8F /* FridgeModel.xcdatamodel */,
+			);
+			currentVersion = BBEF18AB2911D9E400201F8F /* FridgeModel.xcdatamodel */;
+			path = FridgeModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		BBF8AC4628D675CF00847976 /* KitchenHelper.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BBF8AC4728D675CF00847976 /* KitchenHelper.xcdatamodel */,
+			);
+			currentVersion = BBF8AC4728D675CF00847976 /* KitchenHelper.xcdatamodel */;
+			path = KitchenHelper.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BBF8AC3228D675CF00847976 /* Project object */;
+}
