@@ -42,6 +42,7 @@ class RecepiesCategoriesViewController: UIViewController, UITableViewDelegate, U
     }
     func loadCategories(categories: [Category]) {
         models = categories
+        print("loadCategories models = ", models)
         self.tableView.reloadData()
     }
     

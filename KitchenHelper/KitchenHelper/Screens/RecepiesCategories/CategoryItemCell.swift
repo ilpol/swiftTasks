@@ -94,8 +94,11 @@ extension UIImageView {
     func downloadFrom(from imageString: String, contentMode mode: ContentMode = .scaleAspectFit) {
         guard let url = URL(string: imageString) else { return }
         contentMode = mode
-        let savedImage = getItemByUrlCoreData(imageUrl: imageString)
-        self.image = UIImage(data: savedImage.imageData ?? Data())
+        let savedImage = getItemByUrlUserDefaults(imageUrl: imageString)
+        if (savedImage != nil) {
+            self.image = UIImage(data: savedImage?.imageData ?? Data())
+        }
+        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
@@ -105,51 +108,65 @@ extension UIImageView {
                 let image = UIImage(data: data)
             DispatchQueue.main.async() { [weak self] in
                 self?.image = image
-                self?.updateImageCoreData(imageUrl: imageString, imageData: data)
+                self?.updateImageUserDefaults(imageUrl: imageString, imageData: data)
             }
             
         }.resume()
     }
     
-    func updateImageCoreData(imageUrl: String, imageData: Data) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let imageCoreData = getItemByUrlCoreData(imageUrl: imageUrl)
-        imageCoreData.imageData = imageData
-        do {
-            try context.save()
+    func updateImageUserDefaults(imageUrl: String, imageData: Data) {
+        let defaults = UserDefaults.standard
+        
+        var imagesUserDefaults = getAllImageItemsUserDefaults()
+        
+        var isImageDataExist = false
+        for imageUserDefaults in imagesUserDefaults {
+            let str = (imageUserDefaults.imageUrlStr) as String
+
+            if (str == imageUrl) {
+                imageUserDefaults.imageData = imageData
+                isImageDataExist = true
+            }
         }
-        catch {
+        
+        if (!isImageDataExist) {
+            
+                let newImage = ImageEntity(imageUrlStrToSet: imageUrl, imageDataToSet: imageData)
+                imagesUserDefaults.append(newImage)
+        }
+        
+        let encoder = JSONEncoder()
+        if let encoded = try? encoder.encode(imagesUserDefaults) {
+            defaults.set(encoded, forKey: "SavedImages")
         }
     }
     
-    func getAllImageItemsCoreData() -> [DownloadedImage] {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-          let savedImages = try context.fetch(DownloadedImage.fetchRequest())
-            return savedImages
+    func getAllImageItemsUserDefaults() -> [ImageEntity] {
+
+        let defaults = UserDefaults.standard
+        if let savedImages = defaults.object(forKey: "SavedImages") as? Data {
+            let decoder = JSONDecoder()
+            if let loadedImages = try? decoder.decode(ImagesEntity.self, from: savedImages) {
+                
+                return loadedImages.images
+            }
         }
-        catch {
-            
-        }
+
         return []
     }
     
-    func getItemByUrlCoreData(imageUrl: String) -> DownloadedImage {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-          let imagesCoreData = getAllImageItemsCoreData()
-            for imageCoreData in imagesCoreData {
-                let str = (imageCoreData.imageUrlStr ?? "") as String
+    func getItemByUrlUserDefaults(imageUrl: String) -> ImageEntity? {
+        
+        let imagesUserDefaults = getAllImageItemsUserDefaults()
+        for imageUserDefaults in imagesUserDefaults {
+            let savedStr = (imageUserDefaults.imageUrlStr) as String
 
-                if (str == imageUrl) {
-                    return imageCoreData
-                }
+            if (savedStr == imageUrl) {
+                return imageUserDefaults
             }
-            let newItem = DownloadedImage(context: context)
-            newItem.imageUrlStr = imageUrl
-            newItem.imageData = Data()
-            return newItem
         }
+        
+        return nil
     }
 }
 
