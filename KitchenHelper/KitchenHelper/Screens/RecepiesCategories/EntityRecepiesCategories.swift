@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Category: Decodable {
+struct Category: Decodable, Encodable {
     let id: String
     let name: String
     let imageUrl: String
@@ -21,6 +21,6 @@ struct Category: Decodable {
     }
 }
 
-struct CategoriesResponse: Decodable {
+struct CategoriesResponse: Decodable, Encodable {
     let categories: [Category]
 }

@@ -22,7 +22,7 @@ class CategoryItemCell: UITableViewCell {
         return image
     }()
     
-    private let imageIcon: UIImageView = { () -> UIImageView in
+    private var imageIcon: UIImageView = { () -> UIImageView in
         let image = UIImageView()
         image.image = UIImage(named: "drink")!
         return image
@@ -54,9 +54,15 @@ class CategoryItemCell: UITableViewCell {
     func setContent(name: String, description: String, imageUrl: String) {
         titleLabel.text = name
         nameWidth = name.width(withConstrainedHeight: 5, font: UIFont(name: titleLabel.font.fontName, size: 20)!)
-        descriptionLabel.text = "4242"
         
-        imageIcon.downloadFrom(from: imageUrl)
+        NetworService.shared.fetchImage(imageUrl: imageUrl) { result in
+            switch result {
+            case .failure(let error):
+                print("Error fetching categories, \(error)")
+            case .success(let response):
+                self.imageIcon.image = UIImage(data: response)!
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -88,69 +94,6 @@ class CategoryItemCell: UITableViewCell {
         
     }
     
-}
-
-extension UIImageView {
-    func downloadFrom(from imageString: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: imageString) else { return }
-        contentMode = mode
-        let savedImage = getItemByUrlCoreData(imageUrl: imageString)
-        self.image = UIImage(data: savedImage.imageData ?? Data())
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil
-                else { return }
-                let image = UIImage(data: data)
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-                self?.updateImageCoreData(imageUrl: imageString, imageData: data)
-            }
-            
-        }.resume()
-    }
-    
-    func updateImageCoreData(imageUrl: String, imageData: Data) {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        let imageCoreData = getItemByUrlCoreData(imageUrl: imageUrl)
-        imageCoreData.imageData = imageData
-        do {
-            try context.save()
-        }
-        catch {
-        }
-    }
-    
-    func getAllImageItemsCoreData() -> [DownloadedImage] {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-          let savedImages = try context.fetch(DownloadedImage.fetchRequest())
-            return savedImages
-        }
-        catch {
-            
-        }
-        return []
-    }
-    
-    func getItemByUrlCoreData(imageUrl: String) -> DownloadedImage {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        do {
-          let imagesCoreData = getAllImageItemsCoreData()
-            for imageCoreData in imagesCoreData {
-                let str = (imageCoreData.imageUrlStr ?? "") as String
-
-                if (str == imageUrl) {
-                    return imageCoreData
-                }
-            }
-            let newItem = DownloadedImage(context: context)
-            newItem.imageUrlStr = imageUrl
-            newItem.imageData = Data()
-            return newItem
-        }
-    }
 }
 
 extension String {
