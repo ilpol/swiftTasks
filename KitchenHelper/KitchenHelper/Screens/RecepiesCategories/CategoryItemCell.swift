@@ -22,7 +22,7 @@ class CategoryItemCell: UITableViewCell {
         return image
     }()
     
-    private let imageIcon: UIImageView = { () -> UIImageView in
+    private var imageIcon: UIImageView = { () -> UIImageView in
         let image = UIImageView()
         image.image = UIImage(named: "drink")!
         return image
@@ -54,9 +54,15 @@ class CategoryItemCell: UITableViewCell {
     func setContent(name: String, description: String, imageUrl: String) {
         titleLabel.text = name
         nameWidth = name.width(withConstrainedHeight: 5, font: UIFont(name: titleLabel.font.fontName, size: 20)!)
-        descriptionLabel.text = "4242"
         
-        imageIcon.downloadFrom(from: imageUrl)
+        NetworService.shared.fetchImage(imageUrl: imageUrl) { result in
+            switch result {
+            case .failure(let error):
+                print("Error fetching categories, \(error)")
+            case .success(let response):
+                self.imageIcon.image = UIImage(data: response)!
+            }
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -88,86 +94,6 @@ class CategoryItemCell: UITableViewCell {
         
     }
     
-}
-
-extension UIImageView {
-    func downloadFrom(from imageString: String, contentMode mode: ContentMode = .scaleAspectFit) {
-        guard let url = URL(string: imageString) else { return }
-        contentMode = mode
-        let savedImage = getItemByUrlUserDefaults(imageUrl: imageString)
-        if (savedImage != nil) {
-            self.image = UIImage(data: savedImage?.imageData ?? Data())
-        }
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-            guard
-                let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
-                let mimeType = response?.mimeType, mimeType.hasPrefix("image"),
-                let data = data, error == nil
-                else { return }
-                let image = UIImage(data: data)
-            DispatchQueue.main.async() { [weak self] in
-                self?.image = image
-                self?.updateImageUserDefaults(imageUrl: imageString, imageData: data)
-            }
-            
-        }.resume()
-    }
-    
-    func updateImageUserDefaults(imageUrl: String, imageData: Data) {
-        let defaults = UserDefaults.standard
-        
-        var imagesUserDefaults = getAllImageItemsUserDefaults()
-        
-        var isImageDataExist = false
-        for imageUserDefaults in imagesUserDefaults {
-            let str = (imageUserDefaults.imageUrlStr) as String
-
-            if (str == imageUrl) {
-                imageUserDefaults.imageData = imageData
-                isImageDataExist = true
-            }
-        }
-        
-        if (!isImageDataExist) {
-            
-                let newImage = ImageEntity(imageUrlStrToSet: imageUrl, imageDataToSet: imageData)
-                imagesUserDefaults.append(newImage)
-        }
-        
-        let encoder = JSONEncoder()
-        if let encoded = try? encoder.encode(imagesUserDefaults) {
-            defaults.set(encoded, forKey: "SavedImages")
-        }
-    }
-    
-    func getAllImageItemsUserDefaults() -> [ImageEntity] {
-
-        let defaults = UserDefaults.standard
-        if let savedImages = defaults.object(forKey: "SavedImages") as? Data {
-            let decoder = JSONDecoder()
-            if let loadedImages = try? decoder.decode(ImagesEntity.self, from: savedImages) {
-                
-                return loadedImages.images
-            }
-        }
-
-        return []
-    }
-    
-    func getItemByUrlUserDefaults(imageUrl: String) -> ImageEntity? {
-        
-        let imagesUserDefaults = getAllImageItemsUserDefaults()
-        for imageUserDefaults in imagesUserDefaults {
-            let savedStr = (imageUserDefaults.imageUrlStr) as String
-
-            if (savedStr == imageUrl) {
-                return imageUserDefaults
-            }
-        }
-        
-        return nil
-    }
 }
 
 extension String {
