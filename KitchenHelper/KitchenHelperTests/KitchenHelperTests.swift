@@ -17,13 +17,69 @@ class KitchenHelperTests: XCTestCase {
     override func tearDownWithError() throws {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
+    
+    // check whether RecepiesCategoriesInteractor saves categories
+    func testRecepiesCategoriesInteractorCreateCoreDataItem() throws {
+        let recepiesCategoriesInteractor = InteractorRecepiesCategories()
+        
+        recepiesCategoriesInteractor.createItem(id: "123", name: "testItem", imageUrl: "123", descriptionAtr: "testItem description")
+        
+        recepiesCategoriesInteractor.getAllItems()
+        
+        let allItems = recepiesCategoriesInteractor.savedCategories
+        
+        
+        XCTAssertEqual(allItems.last?.name, "testItem")
+      
+    }
+    
+    // check whether RecepiesCategoriesInteractor deletes all categories
+    func testRecepiesCategoriesInteractorDeleteAllItems() throws {
+        let recepiesCategoriesInteractor = InteractorRecepiesCategories()
+        
+        recepiesCategoriesInteractor.createItem(id: "123", name: "testItem", imageUrl: "123", descriptionAtr: "testItem description")
+        
+        recepiesCategoriesInteractor.getAllItems()
+        
+        var allItems = recepiesCategoriesInteractor.savedCategories
+        
+        XCTAssertEqual(allItems.last?.name, "testItem")
+        
+        recepiesCategoriesInteractor.deleteAllItems()
+        
+        recepiesCategoriesInteractor.getAllItems()
+        
+        allItems = recepiesCategoriesInteractor.savedCategories
+        
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        XCTAssertEqual(allItems.count, 0)
+    }
+    
+    // check whether RecepiesCategoriesInteractor loads categories
+    func testRecepiesCategoriesViewLoadCategories() throws {
+        let recepiesCategoriesViewController = RecepiesCategoriesViewController()
+        
+        var categories = [KitchenHelper.Category]()
+        
+        categories.append(KitchenHelper.Category(id: "123", name: "Beef", imageUrl: "123", description: "Beef Description"))
+        
+        categories.append(KitchenHelper.Category(id: "123", name: "Pasta", imageUrl: "123", description: "Pasta Description"))
+        
+        recepiesCategoriesViewController.loadCategories(categories: categories)
+        
+
+        XCTAssertNotEqual(recepiesCategoriesViewController.models.count, 0)
+    }
+
+    // check whether RecepiesCategoriesInteractor fetches categories
+    func testRecepiesCategoriesSaveFunc() throws {
+        let mockNetworkService = MockNetworkService()
+        
+        let interactorRecepiesCategories = InteractorRecepiesCategories(networkService: mockNetworkService)
+        
+        interactorRecepiesCategories.fetchRecepiesCategories()
+        
+        XCTAssertNotEqual(interactorRecepiesCategories.savedCategories.count, 0)
     }
 
     func testPerformanceExample() throws {

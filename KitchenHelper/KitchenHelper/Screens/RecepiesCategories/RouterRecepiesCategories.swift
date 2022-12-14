@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import KitchenHelperTests
 
 typealias EntryPointRecepiesCategories = AnyViewRecepiesCategories & UIViewController
 
@@ -26,7 +27,7 @@ class RouterRecepiesCategories: AnyRouterRecepiesCategories {
         
         //var view: AnyViewFridge = FridgeViewController()
         var presenter: AnyPresenterRecepiesCategories = PresenterRecepiesCategories()
-        var interactor: AnyInteractorRecepiesCategories = InteractorRecepiesCategories()
+        var interactor: AnyInteractorRecepiesCategories = InteractorRecepiesCategories(networkService: MockNetworkService() as NetworkServiceProtocol)
         view.presenter = presenter
         interactor.presenter = presenter
         
@@ -34,7 +35,7 @@ class RouterRecepiesCategories: AnyRouterRecepiesCategories {
         presenter.view = view
         presenter.interactor = interactor
         
-        router.entry = view as? EntryPointRecepiesCategories
+        router.entry = view as EntryPointRecepiesCategories
         
         return router
     }

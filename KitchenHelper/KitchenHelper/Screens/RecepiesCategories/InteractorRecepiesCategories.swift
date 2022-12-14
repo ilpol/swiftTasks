@@ -25,6 +25,7 @@ class InteractorRecepiesCategories: AnyInteractorRecepiesCategories {
     var presenter: AnyPresenterRecepiesCategories?
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     private var fridgeItems = [FridgeItem]()
+    var networkService: NetworkServiceProtocol
 
     
     init() {
@@ -34,6 +35,18 @@ class InteractorRecepiesCategories: AnyInteractorRecepiesCategories {
                 print("Permisssion denied")
             }
         }
+        self.networkService = NetworService.shared
+    }
+    
+    
+    init(networkService: NetworkServiceProtocol) {
+        notificationCenter.requestAuthorization(options: [.alert, .sound]) {
+            (permissionGranted, error) in
+            if (!permissionGranted) {
+                print("Permisssion denied")
+            }
+        }
+        self.networkService = networkService
     }
     func categoryItemToCategory(items: [CategoryItem]) -> [Category] {
         var categoryItems = [Category]()
@@ -67,7 +80,8 @@ class InteractorRecepiesCategories: AnyInteractorRecepiesCategories {
     func fetchRecepiesCategories() {
         getAllItems()
         self.presenter?.onFetchedCategories(categories: categoryItemToCategory(items: savedCategories))
-        NetworService.shared.fetchCategories() { result in
+       
+        networkService.fetchCategories() { result in
             switch result {
             case .failure(let error):
                 print("Error fetching categories, \(error)")

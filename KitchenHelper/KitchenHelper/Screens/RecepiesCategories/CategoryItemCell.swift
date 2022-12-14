@@ -56,7 +56,15 @@ class CategoryItemCell: UITableViewCell {
         nameWidth = name.width(withConstrainedHeight: 5, font: UIFont(name: titleLabel.font.fontName, size: 20)!)
         descriptionLabel.text = "4242"
         
-        imageIcon.downloadFrom(from: imageUrl)
+        // imageIcon.downloadFrom(from: imageUrl)
+        NetworService.shared.fetchImage(imageUrl: imageUrl) { result in
+            switch result {
+            case .failure(let error):
+                print("Error fetching categories, \(error)")
+            case .success(let response):
+                self.imageIcon.image = UIImage(data: response)!
+            }
+        }
     }
     
     required init?(coder: NSCoder) {

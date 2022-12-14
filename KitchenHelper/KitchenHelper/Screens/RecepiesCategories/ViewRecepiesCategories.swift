@@ -17,7 +17,7 @@ class RecepiesCategoriesViewController: UIViewController, UITableViewDelegate, U
 
     let tableView = UITableView()
     var presenter: AnyPresenterRecepiesCategories?
-    private var models = [Category]()
+    var models = [Category]()
     
     
     override func viewDidLoad() {
