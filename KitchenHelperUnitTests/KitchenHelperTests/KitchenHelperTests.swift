@@ -79,6 +79,8 @@ class KitchenHelperTests: XCTestCase {
         
         interactorRecepiesCategories.fetchRecepiesCategories()
         
+        interactorRecepiesCategories.getAllItems()
+        
         XCTAssertNotEqual(interactorRecepiesCategories.savedCategories.count, 0)
     }
 
