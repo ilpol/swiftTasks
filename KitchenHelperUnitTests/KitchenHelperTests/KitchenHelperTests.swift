@@ -72,7 +72,7 @@ class KitchenHelperTests: XCTestCase {
     }
 
     // check whether RecepiesCategoriesInteractor fetches categories
-    func testRecepiesCategoriesSaveFunc() throws {
+    func testRecepiesCategoriesLoadFunc() throws {
         let mockNetworkService = MockNetworkService()
         
         let interactorRecepiesCategories = InteractorRecepiesCategories(networkService: mockNetworkService)
