@@ -48,6 +48,7 @@
 		BBA95443293123C80053AA8A /* PresenterRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95442293123C80053AA8A /* PresenterRecepiesCategories.swift */; };
 		BBA95445293123D30053AA8A /* EntityRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95444293123D30053AA8A /* EntityRecepiesCategories.swift */; };
 		BBA95447293123DF0053AA8A /* RouterRecepiesCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA95446293123DF0053AA8A /* RouterRecepiesCategories.swift */; };
+		BBCE9356294F296D008AE1F7 /* ViewOnboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCE9355294F296D008AE1F7 /* ViewOnboarding.swift */; };
 		BBE7CAD1293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7CACF293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift */; };
 		BBE7CAD2293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE7CAD0293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift */; };
 		BBEF18AC2911D9E400201F8F /* FridgeModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBEF18AA2911D9E400201F8F /* FridgeModel.xcdatamodeld */; };
@@ -119,6 +120,7 @@
 		BBA95442293123C80053AA8A /* PresenterRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenterRecepiesCategories.swift; sourceTree = "<group>"; };
 		BBA95444293123D30053AA8A /* EntityRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityRecepiesCategories.swift; sourceTree = "<group>"; };
 		BBA95446293123DF0053AA8A /* RouterRecepiesCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterRecepiesCategories.swift; sourceTree = "<group>"; };
+		BBCE9355294F296D008AE1F7 /* ViewOnboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewOnboarding.swift; sourceTree = "<group>"; };
 		BBE7CACF293D219D00FA1F30 /* DownloadedImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BBE7CAD0293D219D00FA1F30 /* DownloadedImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DownloadedImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BBEF18AB2911D9E400201F8F /* FridgeModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FridgeModel.xcdatamodel; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 		BB279FE72932417300733452 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				BBCE9354294F2934008AE1F7 /* Onboarding */,
 				BB279FF32932696D00733452 /* FridgeItem */,
 				BB279FE82932443200733452 /* FridgeItemForm */,
 				BBA9543D293123640053AA8A /* RecepiesCategories */,
@@ -289,6 +292,14 @@
 				BBF9D529292447B100188B37 /* CategoryItemCell.swift */,
 			);
 			path = RecepiesCategories;
+			sourceTree = "<group>";
+		};
+		BBCE9354294F2934008AE1F7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				BBCE9355294F296D008AE1F7 /* ViewOnboarding.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 		BBE7CACE293D213800FA1F30 /* DownloadedImage */ = {
@@ -523,6 +534,7 @@
 				BB8245672921581200A095DB /* StartTabBarVC.swift in Sources */,
 				BBA7215C292A4CEF0034E2F4 /* InteractorFridge.swift in Sources */,
 				BBF9D52A292447B100188B37 /* CategoryItemCell.swift in Sources */,
+				BBCE9356294F296D008AE1F7 /* ViewOnboarding.swift in Sources */,
 				BBA9543F293123AF0053AA8A /* ViewRecepiesCategories.swift in Sources */,
 				BBA95447293123DF0053AA8A /* RouterRecepiesCategories.swift in Sources */,
 				BB6E72D52915540900A095BD /* FridgeItem+CoreDataClass.swift in Sources */,

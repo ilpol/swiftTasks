@@ -24,7 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         //self.window?.rootViewController = home
         let navController = StartNavigationController.getNavController()
         navController.pushViewController(home, animated: false)
-        window?.rootViewController = StartTabBarVC() //navController
+        window?.rootViewController = StartTabBarVC()
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
     }
