@@ -29,7 +29,9 @@ class NetworService: NetworkServiceProtocol {
     
     func fetchImage(imageUrl: String, completion: @escaping (Result<Data, Error>) -> () ) {
         let savedImage = getItemByUrlCoreData(imageUrl: imageUrl)
-        completion(.success(savedImage.imageData ?? Data()))
+//        if (savedImage.imageData?.count != 0) {
+//            completion(.success(savedImage.imageData ?? Data()))
+//        }
         
         fetchImageDataRaw(urlString: imageUrl) { result in
             switch result {

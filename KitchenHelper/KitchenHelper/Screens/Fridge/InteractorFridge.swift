@@ -34,7 +34,6 @@ class FridgeInteractor: AnyInteractorFridge {
     }
     
     func fetchFridgeItems() {
-        print("fetchFridgeItems")
         do {
             fridgeItems = try context.fetch(FridgeItem.fetchRequest())
             DispatchQueue.main.async {

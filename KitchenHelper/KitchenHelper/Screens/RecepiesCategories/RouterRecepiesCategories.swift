@@ -27,7 +27,7 @@ class RouterRecepiesCategories: AnyRouterRecepiesCategories {
         
         //var view: AnyViewFridge = FridgeViewController()
         var presenter: AnyPresenterRecepiesCategories = PresenterRecepiesCategories()
-        var interactor: AnyInteractorRecepiesCategories = InteractorRecepiesCategories(networkService: MockNetworkService() as NetworkServiceProtocol)
+        var interactor: AnyInteractorRecepiesCategories = InteractorRecepiesCategories()
         view.presenter = presenter
         interactor.presenter = presenter
         
@@ -36,6 +36,13 @@ class RouterRecepiesCategories: AnyRouterRecepiesCategories {
         presenter.interactor = interactor
         
         router.entry = view as EntryPointRecepiesCategories
+        
+        ConfigureNavigation.shared.openOnboarding(from: view)
+        
+//        let nav = UINavigationController(rootViewController: view)
+//        nav.modalPresentationStyle = .overFullScreen
+//        self.present(nav, animation: true)
+
         
         return router
     }

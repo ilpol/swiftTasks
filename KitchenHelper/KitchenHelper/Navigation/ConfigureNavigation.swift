@@ -27,4 +27,16 @@ class ConfigureNavigation: AnyConfigureNavigation {
     func openFridgeItem(from view:UIViewController, fridgeItem: FridgeItem) {
         FridgeItemRouter.start(from: view, fridgeItem: fridgeItem)
     }
+    func openOnboarding(from prevView:UIViewController) {
+        let defaults = UserDefaults.standard
+        let isShownOnboarding = defaults.bool(forKey: "isShownOnboarding")
+        if (!isShownOnboarding) {
+            defaults.set(true, forKey: "isShownOnboarding")
+            let viewOnboarding = ViewOnboarding()
+            viewOnboarding.modalPresentationStyle = .overFullScreen
+            
+            prevView.navigationController?.pushViewController(viewOnboarding as UIViewController, animated: true)
+        }
+        
+    }
 }
